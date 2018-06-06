@@ -1,0 +1,11 @@
+extends ../includes/layout.pug
+
+block content
+    .error
+        h1 Error N° #{error.status}:
+        h2 error.statusText
+        a.button.show(href="/") Inicio
+        .item
+            pre #{error.stack}
+            p Es despliegue de errores
+        img(src="halo-3.jpg")

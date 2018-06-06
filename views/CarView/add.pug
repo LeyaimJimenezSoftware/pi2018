@@ -1,0 +1,26 @@
+extends ./includes/layout.pug
+
+block content
+    section.container
+        h1.header= title
+        article.item
+            form.form(method="post", action="/")
+                fieldset
+                    div
+                        input(type="text", class = "form-control", name="noSerie", placeholder="noSerie", required)
+                    div
+                        input(type="text", class = "form-control", name="Marca", placeholder="Marca", required)
+                    div
+                        input(type="text", class = "form-control", name="Tipo", placeholder="Tipo", required)
+                    div
+                        input(type="text", class = "form-control", name="Transmision", placeholder="Transmision", required)
+                    div 
+                        input(type="text", class = "form-control", name="Puertas", placeholder="Puertas", required)
+                    - div 
+                        input(type="date", class = "form-control", name="FechaIntroduccion", placeholder="FechaIntroduccion",  data-date-format="yyyy/mm/dd", required)
+                    div
+                        input.button.add(type="submit", class = "form-control", value="Agregar")
+      
+        a.button.show(href="/") Inicio
+
+        

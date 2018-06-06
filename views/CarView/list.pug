@@ -1,0 +1,44 @@
+extends ./includes/layout.pug
+
+block content
+    section.container
+        // La clase se declara con un punto .
+        h1.header= title  
+        img(src = "vol.jpg")
+        article.item
+            div
+                a.button.add(href="/agregar") Agregar
+            if(data.length)
+                table.table
+                    tr.thead-dark  
+                        th NoSerie
+                        th Marca
+                        th Tipo
+                        th Transmision
+                        th Puertas
+                        th FechaIntroduccion
+                        th
+                        th
+                    each autos in data
+                        tr
+                            td #{autos.NoSerie}
+                            td #{autos.Marca}
+                            td #{autos.Tipo}
+                            td #{autos.Transmision}
+                            td #{autos.Puertas}
+                            td #{autos.FechaIntroduccion}
+                            td 
+                            td
+                                a.button.edit(class = "btn btn-primary" ,href="/editar/"+ autos.noSerie) Editar
+                            td
+                                form(method="post", action="/eliminar/"+ autos.noSerie)
+                                    input(type="hidden", class = "form-control",name="_method", value="DELETE")
+                                    input.button.delete(type="button", class = "form-control", value="Eliminar", onclick="eliminar(this)")
+                script.
+                    function eliminar(input){
+                        let deleteOK = confirm('¿Estás seguro de eliminar el registro'); // funcion Dos botones aceptar y rechazar
+                        return (deleteOK) ? input.parentNode.submit() : false;
+                        //ParentNode es saber su padre
+                    }
+            else
+                div.error No tienes contactos que mostrar

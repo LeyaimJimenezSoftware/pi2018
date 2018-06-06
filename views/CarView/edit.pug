@@ -1,0 +1,26 @@
+extends ./includes/layout.pug
+
+block content
+    section.container
+        h1.header= title
+        article.item
+            form.form(method="post", action="/actualizar/" + data[0].noSerie)
+                input(type="hidden", name="_method", value="PUT")
+                input(type="hidden", name="id", value=data[0].noSerie)
+                fieldset
+                    div
+                
+                        input(type="text", class = "form-control", name="noSerie", placeholder="noSerie", value=data[0].noSerie, required)
+                    div
+                        input(type="text", class = "form-control", name="Marca", placeholder="Marca", value=data[0].Marca, required)
+                    div
+                        input(type="text", class = "form-control", name="Tipo", placeholder="Tipo", value=data[0].Tipo, required)
+                    div
+                         input(type="text", class = "form-control", name="Transmision", placeholder="Transmision", value=data[0].Transmision, required)
+                    div
+                          input(type="text", class = "form-control", name="Puertas", placeholder="Puertas", value=data[0].Puertas, required)
+                    div
+                          input(type="date", class = "form-control", name="FechaIntroduccion", placeholder="FechaIntroduccion",  data-date-format="yyyy/mm/dd", value=data[0].FechaIntroduccion, required)      
+                    div
+                        input.button.edit(type="submit", value="Editar")
+        a.button.show(href="/") Inicio

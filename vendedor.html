@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Vendedor</title>
+        <!-- Links -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        
+    <a class="navbar-brand" href="#">Control de Autos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home Vendedor <span class="sr-only">(current)</span></a>
+        </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Localidad
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Villa de Alvarez</a>
+                <a class="dropdown-item" href="#">Colima</a>
+            <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Manzanillo</a>
+            </div>
+        </li>
+        
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <h1 class="my-4">Localidad:
+            <small>Manzanillo</small>
+        </h1>
+
+        <!-- Tabla -->
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Apartar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><button type="button" class="btn btn-primary">Apartar</button></td>
+                </tr>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><button type="button" class="btn btn-primary">Apartar</button></td>
+                </tr>
+                <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><button type="button" class="btn btn-primary">Apartar</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!-- Descripcion -->
+        <div class="row">
+            <div class="col-md-7">
+            <a href="#">
+                <img class="img-fluid rounded mb-3 mb-md-0" src="img\car01.jpg" alt="">
+            </a>
+            </div>
+            <div class="col-md-5">
+            <h3>Descripcion del auto</h3>
+            <p>El Model 3 es el coche más económico de Tesla con un precio de 35.000 dólares, mucho menos de los más de 90.000 dólares que cuesta el Model S 
+                y el Model X. Pero este precio tiene trampa y letras pequeñas. Solo el modelo más básico del Model 3 puede costar eso. De resto, tendrás que pagar más.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Butones de abajo -->
+        <center>
+            <button type="button" class="btn btn-primary">Apartar</button>
+            <button type="button" class="btn btn-success">Vender</button>
+            <button type="button" class="btn btn-secondary" disabled>Solicitar</button>
+        </center>
+
+        <hr>
+      
+    </div>
+
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Equipo 4: Gali,Fidel,Leya,Santi. 2018</p>
+            </div>
+        </footer>
+    
+</body>
+</html>

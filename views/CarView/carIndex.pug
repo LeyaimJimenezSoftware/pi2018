@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  title CarStore 
+  // Bootstrap core CSS
+  link(href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  // Custom fonts for this template
+  link(href='vendor/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css')
+  link(href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css')
+  // Custom styles for this template
+  link(href='css/grayscale.min.css' rel='stylesheet')
+// Navigation
+nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+  .container
+    a.navbar-brand.js-scroll-trigger(href='#page-top') CarStore
+    button.navbar-toggler.navbar-toggler-right(type='button' data-toggle='collapse' data-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      | Menu
+      i.fa.fa-bars
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link.js-scroll-trigger(href='#about') About
+        li.nav-item
+          a.nav-link.js-scroll-trigger(href='#download') Download
+        li.nav-item
+          a.nav-link.js-scroll-trigger(href='#contact') Contact
+// Intro Header
+header.masthead
+  .intro-body
+    .container
+      .row
+        .col-lg-8.mx-auto
+          h1.brand-heading Bienvenido a CarStore 
+          p.intro-text
+            | A free, responsive, one page Bootstrap theme.
+            br
+            | Created by Start Bootstrap.
+          a.btn.btn-circle.js-scroll-trigger(href='#about')
+            i.fa.fa-angle-double-down.animated
+p Click the button to list all the items in the array.
+button(onclick='numbers.forEach(myFunction)') Try it
+p#demo
+script.
+  demoP = document.getElementById("demo");
+  var numbers = [4, 9, 16, 25];
+  function myFunction(item, index) {
+  demoP.innerHTML = demoP.innerHTML + "index[" + index + "]: " + item + "<br>";
+  }
+// section
+section
+  h1 WWF&apos;s Panda symbol
+  p
+    | The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.
+  table.table.table-striped.table-dark
+    thead
+      tr
+        th(scope='col') #
+        th(scope='col') First
+        th(scope='col') Last
+        th(scope='col') Handle
+    tbody
+      tr
+        th(scope='row') 1
+        td  n 
+        td Otto
+        td @mdo
+      tr
+// Footer
+footer
+  .container.text-center
+    p Copyright &copy; Your Website 2018
+// Bootstrap core JavaScript
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+// Plugin JavaScript
+script(src='vendor/jquery-easing/jquery.easing.min.js')
+|  --&gt;
+// Custom scripts for this template
+script(src='js/grayscale.min.js')

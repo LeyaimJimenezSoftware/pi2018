@@ -1,7 +1,7 @@
 {
     "mysql": {
-        "host": "fgarcia14.tk",
-        "user": "leya",
+        "host": "fgarcia14.mysql.database.azure.com",
+        "user": "leya@fgarcia14",
         "password": "pi18",
         "port": 3306,
         "db": "pi18"

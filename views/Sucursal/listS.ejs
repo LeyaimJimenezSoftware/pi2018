@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>G. Agencia</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+	<header class="header">
+		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="/">Gerente Agencia</a></div>
+			<nav class="main_nav">
+				<ul>
+					
+					<li ><a class="js-scroll-trigger" href="/agregarSucursal">Agregar Sucursal</a></li>
+					
+					
+					
+
+				</ul>
+			</nav>
+			<div class="header_content ml-auto">
+				<div class="search header_search">
+					<form action="#">
+						<input type="search" class="search_input" required="required">
+						<button type="submit" id="search_button" class="search_button"><img src="images/magnifying-glass.svg" alt=""></button>
+					</form>
+				</div>
+				<div class="shopping">
+					
+				</div>
+			</div>
+
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+		</div>
+		
+	</header>
+
+	<!-- Menu -->
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="logo menu_mm"><a href="#">Control de Autos</a></div>
+		<div class="search">
+			<form action="#">
+				<input type="search" class="search_input menu_mm" required="required">
+				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="#">Home Vendedor</a></li>
+
+				<li class="menu_mm"><a href="contact.html">contact</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+	
+
+	<!-- Stock -->
+<section id="stock" class="content-section text-center">
+	<div class="promo">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">Localidad:</div>
+						<div class="section_title">Manzanillo</div>
+						<div class="section_title">Stock</div>
+					</div>
+				</div>
+			</div>
+			<div class="row promo_container">
+
+					<table class="table">
+                        <tr>
+                            <th>Numero de Sucursal</th>
+                            <th>Nombre</th>
+							<th>Domicilio</th>
+							
+                          </tr>
+                          <% for (var i = 0; i < data.length; i ++) { %>
+                            <tr>
+                              <td><%= data[i].noSucursal %></td>
+                              <td><%= data[i].nombre %></td>
+							  <td><%= data[i].domicilio %></td>
+							 
+							  
+							  <td class="userInput"><a class = "btn btn-primary" href="/editarSucursales/<%= data[i].noSucursal %>">Editar</a></td>
+							  <td>
+								<form action="/eliminarSucursal/<%= data[i].noSucursal %>" method="post">
+									<input type="hidden", class = "form-control",name="_method", value="DELETE">
+                                    <input type="button", class = "form-control", value="Eliminar", onclick="eliminar(this)">
+								
+								  </form>
+							  </td>
+                            </tr>
+						  <% } %>
+						  <script>
+							function  eliminar(input) {
+								var txt;
+								var r = confirm("Alerta! Confirma para eliminar elemento");
+								if (r == true) {
+									input.parentNode.submit()
+								} else {
+									txt = "You pressed Cancel!";
+								}
+								
+							}
+							</script>
+					</table>
+					<hr>
+			</div>
+		</div>
+	</div>
+</section>
+	
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="footer_logo"><a href="#">Control de Autos</a></div>
+					<nav class="footer_nav">
+						<ul>
+							<li><a href="index.html">home</a></li>
+							<li><a href="contact.html">contact</a></li>
+						</ul>
+					</nav>
+					<div class="footer_social">
+						<ul>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/custom.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script> 
+<script src="js/grayscale.min.js"></script>
+</body>
+</html>
